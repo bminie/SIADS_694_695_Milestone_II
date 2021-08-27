@@ -3,4 +3,4 @@ This document will be updated with additional details as the project progresses
 
 ## Data Merging
 Due to the original large file size of the data, the file was split and needs to be reassembled before use.
-To reassemble the file, run cat xa{a:o} > cells.loom
+To reassemble the file, run cat xa{a..c} > cells.h5ad
