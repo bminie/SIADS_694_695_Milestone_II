@@ -8,6 +8,8 @@ Due to the original large file size of the data, the file was split and needs to
 
 To reassemble the file, run cat xa{a..c} > cells.h5ad
 
+Example files for the first 100 rows of the data set can be found in data/cell_by_gene_matrix_example.csv and cell_labels_example.csv
+
 ## Generating Train and Test Data Sets
 To generate the training and test data sets, you can run the notebook Generate_multiple_pca.ipynb.
 
@@ -20,7 +22,7 @@ The following supervised learning classifiers/algorithms will be tested: Dummy c
 
 The input into the different classifiers will be the train-test sets that were generated as part of the Generating Train and Test Data Sets step. For each model, the different data sets generated using the varying number of principal components will be tested. Precision, recall, and f1-score will be calculated and plotted for each model. A summary dataframe that contains all the information will also be generated so it can be used for further analysis if desired.
 
-To run the models, you can run the notebook Supervised_Learning.ipynb
+To run the models, you can run the notebook Supervised_Learning.ipynb and to generate summary plots you can run Supervised_Plotting.ipynb
 
 ## Unsupervised Learning
 The primary objectives of the unsupervised learning process are data exploration, discovering patterns, uncovering latent structure, and potentially finding useful features for a downstream classification task. As discussed above, the goal of the project is to use gene expression data to identify cell types.  The goal of unsupervised learning in this context is to understand the gene expression patterns in more detail and hopefully to use this understanding to augment the supervised learning process.  To that end, the main task was to use unsupervised methods to create clusters that are a feature in downstream supervised learning classification.
